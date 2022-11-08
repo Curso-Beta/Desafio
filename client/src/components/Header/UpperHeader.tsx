@@ -1,0 +1,85 @@
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PhoneIcon from '@mui/icons-material/Phone';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Box } from '@mui/material';
+import Link from 'next/link';
+
+export default function UpperHeader() {
+  return (
+    <Box bgcolor='#eee' mb='1rem' display='flex' justifyContent='center'>
+      <Box display='flex' justifyContent='space-between' width='100%'>
+        <Box display='flex'>
+          <Link
+            href='https://www.facebook.com/cursobetaonline/'
+            target='_blank'
+            rel='noreferrer'
+            style={{ margin: '.8rem 1rem .8rem 3rem', color: 'gray' }}
+          >
+            <FacebookOutlinedIcon fontSize='small' />
+          </Link>
+          <Link
+            href='https://www.instagram.com/cursobeta'
+            style={{ margin: '.8rem 1rem', color: 'gray' }}
+            target='_blank'
+            rel='noreferrer'
+          >
+            <InstagramIcon fontSize='small' />
+          </Link>
+          <Link
+            href='https://www.linkedin.com/company/curso-beta'
+            style={{ margin: '.8rem 1rem', color: 'gray' }}
+            target='_blank'
+            rel='noreferrer'
+          >
+            <LinkedInIcon fontSize='small' />
+          </Link>
+          <Link
+            href='https://www.youtube.com/c/CursoBeta'
+            style={{ margin: '.8rem 1rem', color: 'gray' }}
+            target='_blank'
+            rel='noreferrer'
+          >
+            <YouTubeIcon fontSize='small' />
+          </Link>
+        </Box>
+        <Box display='flex'>
+          <Box
+            m='1rem'
+            fontSize='.8rem'
+            color='#777'
+            display='flex'
+            alignItems='center'
+          >
+            <MailOutlineIcon sx={{ height: 16 }} />
+            contato@cursobeta.com.br
+          </Box>
+          <Box
+            margin='1rem'
+            fontSize='.8rem'
+            color='#777'
+            display='flex'
+            alignItems='center'
+          >
+            <PhoneIcon sx={{ height: 15 }} />
+            4003 2140
+          </Box>
+          <Box
+            m='1rem'
+            fontSize='.8rem'
+            color='#777'
+            display='flex'
+            alignItems='center'
+            mr={'3rem'}
+          >
+            <WhatsAppIcon sx={{ height: 15 }} />
+            (11) 4020-1766
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+}
