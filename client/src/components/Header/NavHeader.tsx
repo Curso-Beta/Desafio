@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Box } from '@mui/system';
 import MUIButton from '../UI/MUIButton';
+import Link from 'next/link';
 
 export default function NavHeader() {
   return (
@@ -9,7 +10,8 @@ export default function NavHeader() {
           <Image src='/logo_branca.png' alt='' width='120' height='50' />
         </Box>
       <Box m={'1rem'}>
-          <MUIButton
+      <Link href='/'>
+        <MUIButton
             bgColor='#0081a6'
             variant='contained'
             size='small'
@@ -17,9 +19,17 @@ export default function NavHeader() {
           >
             Home
           </MUIButton>
+        </Link>
+        <Link href='/search'>
           <MUIButton bgColor='#bc384b' variant='contained' size='small'>
             Busque por um vídeo
           </MUIButton>
+        </Link>
+        <Link href='/video'>
+          <MUIButton bgColor='#bc384b' variant='contained' size='small'>
+            Vídeo
+          </MUIButton>
+        </Link>
       </Box>
     </Box>
   );

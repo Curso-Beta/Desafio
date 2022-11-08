@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Box>
       <Head>
-        <title> Home - Curso Beta</title>
+        <title>Busca</title>
         <meta
           name='description'
           content='Curso Beta'
@@ -15,18 +15,8 @@ export default function Home() {
         <link rel='shortcut icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <Box
-        sx={{ marginTop: '3rem', display: 'flex', justifyContent: 'center' }}
-      >
-        <Stack sx={{ width: '700px', gap: '1rem' }}>
-          <Typography variant='h4' color='gray' fontWeight={600}>
-            Beta Cursos
-          </Typography>
-        </Stack>
-      </Box>
       <Box>
-        Lista Vídeos
-        {}
+        Buscar Vídeo
       </Box>
     </Box>
   );

@@ -7,26 +7,16 @@ export default function Home() {
   return (
     <Box>
       <Head>
-        <title> Home - Curso Beta</title>
+        <title>Vídeo</title>
         <meta
           name='description'
-          content='Curso Beta'
+          content='Você está na Amparo Telefônica, uma empresa com diversos planos que facilitam e dimuem seu custo em ligações. Quer receber um serviço que se encaixe na sua rotina? Venha pra Amparo!'
         />
         <link rel='shortcut icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <Box
-        sx={{ marginTop: '3rem', display: 'flex', justifyContent: 'center' }}
-      >
-        <Stack sx={{ width: '700px', gap: '1rem' }}>
-          <Typography variant='h4' color='gray' fontWeight={600}>
-            Beta Cursos
-          </Typography>
-        </Stack>
-      </Box>
       <Box>
         Lista Vídeos
-        {}
       </Box>
     </Box>
   );
