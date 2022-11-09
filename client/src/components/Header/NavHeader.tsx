@@ -1,17 +1,20 @@
 import Image from 'next/image';
 import { Box } from '@mui/system';
+import { Stack, Typography } from '@mui/material';
 import MUIButton from '../UI/MUIButton';
 import Link from 'next/link';
 
 export default function NavHeader() {
   return (
     <Box display='flex' justifyContent='space-between' width='100%'>
-        <Box ml='10' style={{backgroundColor: 'black'}}>
-          <Image src='/logo_branca.png' alt='' width='120' height='50' />
+        <Box>
+          <Typography variant='h4' color='gray' fontWeight={600}>
+            Beta Cursos
+          </Typography>
         </Box>
       <Box m={'1rem'}>
-      <Link href='/'>
-        <MUIButton
+        <Link href='/'>
+          <MUIButton
             bgColor='#0081a6'
             variant='contained'
             size='small'

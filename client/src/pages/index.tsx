@@ -1,7 +1,9 @@
 import Head from 'next/head'
-import { Stack, Typography } from '@mui/material';
+import { Stack, Typography, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import Header from '../components/Header';
+import VideoCard from './_videoCard';
+import mock from '../mock';
 
 export default function Home() {
   return (
@@ -15,18 +17,16 @@ export default function Home() {
         <link rel='shortcut icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <Box
-        sx={{ marginTop: '3rem', display: 'flex', justifyContent: 'center' }}
-      >
-        <Stack sx={{ width: '700px', gap: '1rem' }}>
-          <Typography variant='h4' color='gray' fontWeight={600}>
-            Beta Cursos
-          </Typography>
+
+      <Box mt={5}>
+        <Typography variant='h4' color='gray' fontWeight='600'>
+        Lista de Vídeos
+        </Typography>
+        <Stack direction="row" flexWrap='wrap' sx={{ gap: '1rem', mt: 5 }} justifyContent="center">
+          {mock?.map((videoProps) => (
+            <VideoCard key={videoProps.url} videoProps={videoProps} />
+          ))}
         </Stack>
-      </Box>
-      <Box>
-        Lista Vídeos
-        {}
       </Box>
     </Box>
   );

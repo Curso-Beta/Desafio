@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <Header />
       <Box>
-        Lista Vídeos
+        Vídeo
       </Box>
     </Box>
   );
