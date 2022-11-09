@@ -4,6 +4,7 @@ import { useField, FieldAttributes } from 'formik';
 type MyRadioProps = { label?: string } & FieldAttributes<{}>;
 
 function MUInput({ label, ...props }: MyRadioProps): JSX.Element {
+  console.log(props)
   const [field, meta] = useField<{}>(props);
   const errorText: string = meta.error && meta.touched ? meta.error : '';
   return (
